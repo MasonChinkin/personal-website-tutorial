@@ -11,8 +11,6 @@ This tutorial spawned from my own quest to upgrade my personal website from a [G
 I have done the advanced configuration for you in the repos you will fork, and you can learn that stuff in your own time. You can do it! Almost every tool you will use in this tutrial was completely new to me when I started this.
 
 ## Preview of tools used
-All cloud tools will be within the `Google Cloud Platform` environment.
-
 This setup is typically called a "mutli-container" application. Each app is built into a `Docker` container. `Docker-Compose` will spin up all of the apps on your server, and use `Nginx` to direct traffic to those apps based on the url.
 
 CI/CD uses `Google Cloud Build` and `Google Container Registry`
