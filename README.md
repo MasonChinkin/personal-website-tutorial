@@ -58,11 +58,11 @@ You will need a gmail account and github account. Even though everything will be
   * [LINK](https://domains.google/)
   * A `.com` url will cost $12/year
   * Go to [DNS Settings](https://domains.google.com/m/registrar/). Add 2 records under `Custom resource records` with your instance's static IP.
-  
+
 | name | type | TTL | data                    |
 |------|------|-----|-------------------------|
-| @    | A    | 1h  | Your Instance IP Adress |
-| www  | A    | 1h  | Your Instance Adress    |
+| @    | A    | 1h  | Your Instance IP Address|
+| www  | A    | 1h  | Your Instance IP Address|
 
 #### Set Up GitHub
 * Fork these 3 repos
