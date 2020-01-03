@@ -2,7 +2,7 @@
 
 # A cheap, moderate skill level setup for your personal website + projects
 
-This tutorial spawned from my own quest to upgrade my personal website from a [GitHub Page](https://masonchinkin.github.io/) to something more advanced, using what I had learned since starting my career as a software engineer. At a high level, I had two MVPs for my website:
+This tutorial spawned from my own quest to upgrade my personal website from a [GitHub Page](https://masonchinkin.github.io/) to [something more advanced](masonchinkin.com), using what I had learned since starting my career as a software engineer. At a high level, I had two MVPs for my website:
 
 1. Commits pushed to github should be automatically tested and (if tests pass) deployed to the server.
 2. It should serve independent apps from independent repos under subdirectories, allowing the freedom to explore different projects with no concern for dependencies or git histories. i.e. masonchinkin.com and masonchinkin.com/baseapp are seperate apps.
@@ -93,7 +93,7 @@ You will need a gmail account and github account. Even though everything will be
 * Confirm that it containers are running with `sudo docker ps`
 
 #### Is it working???????
-* If the homepage app is not loading at the IP address, double check that you didn't miss anything.
+* If the homepage app is not loading at the IP address, double check that you followed all instructions above exactly.
 * If you definitely did everything right, make an issue and I'll try to help :)
 
 ## You did it!
