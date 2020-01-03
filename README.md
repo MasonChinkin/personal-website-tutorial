@@ -54,6 +54,12 @@ You will need a gmail account and github account. Even though everything will be
   * By default, the IP address will change every time your server restarts
   * Make it static at this [LINK](https://console.cloud.google.com/networking/addresses) using the drop down under `Type`
 
+* Give `Cloud Build` ssh access to the instance
+  * [LINK](https://console.cloud.google.com/iam-admin/iam)
+  * Give the accounts ending in `...@cloudbuild.gserviceaccount.com` and `...@gcp-sa-cloudbuild.iam.gserviceaccount.com` the following roles:
+    * `Compute Instance Admin (v1)`
+    * `Compute OS Admin Login`
+
 * Set up the DNS with `Google Domains`
   * [LINK](https://domains.google/)
   * A `.com` url will cost $12/year
@@ -93,7 +99,11 @@ You will need a gmail account and github account. Even though everything will be
 * Confirm that it containers are running with `sudo docker ps`
 
 #### Is it working???????
-* If the homepage app is not loading at the IP address, double check that you followed all instructions above exactly.
+* Check your homepageurl.com and homepageurl.com/baseapp
+* If it is not loading, double check that you followed all instructions above **EXACTLY**.
 * If you definitely did everything right, make an issue and I'll try to help :)
 
-## You did it!
+#### Is CI/CD working?
+* Make a change to the html in `CreateReactApp.jsx` and push to github
+* Check that [Cloud Build](https://console.cloud.google.com/cloud-build) was triggered correctly, there should be a build in progress
+* Watch the build go! Take a look at `cloudbuild.yaml` to understand what is behind it.
