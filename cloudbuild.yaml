@@ -1,0 +1,45 @@
+steps:
+- id: 'npm install'
+  name: 'node:12.10-alpine'
+  args: ['npm', 'install']
+
+- id: 'npm run build'
+  name: 'node:12.10-alpine'
+  args: ['npm', 'run', 'build']
+
+- id: 'npm run test'
+  name: 'node:12.10-alpine'
+  args: ['npm', 'run', 'test']
+
+- id: 'docker build'
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME', '.']
+
+- id: 'docker push'
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/$REPO_NAME']
+
+- id: 'delete old cloudbuild ssh keys to keep profile json under 32kb limit'
+  name: gcr.io/cloud-builders/gcloud
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    for i in $(gcloud compute os-login ssh-keys list | grep -v FINGERPRINT); do echo $i; gcloud compute os-login ssh-keys remove --key $i; done
+
+- id: 'ssh into GCE instance'
+  name: gcr.io/cloud-builders/gcloud
+  args: [
+    'compute',
+    'ssh',
+    '--zone',
+    'us-central1-a',
+    'portfolio',
+    '--',
+    'sudo docker pull gcr.io/$PROJECT_ID/$REPO_NAME',
+    '&& sudo docker-compose -f ../$^^^^^^$/personal-website-tutorial-docker-compose/docker-compose.yaml up -d --no-deps --build homepage',
+    '&& sudo docker system prune -a -f',
+    '&& sudo docker ps'
+  ]
+
+  # Replace $^^^^^^$ above with the username you see when you ssh into the instance
