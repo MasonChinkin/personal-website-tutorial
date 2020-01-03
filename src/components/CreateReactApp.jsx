@@ -6,17 +6,17 @@ function CreateReactApp() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Base app for my personal website setup. Fork the repo linked below to make new subdirectory.</p>
+        <p>This is my homepage. There are many like it, but this one is mine. My homepage is my best friend. It is my life.</p>
         
         <br />
         <br />
         
         <a className="App-link"
-          href="https://github.com/MasonChinkin/personal-website-base-app"
+          href="https://github.com/MasonChinkin/personal-website-tutorial"
           target="_blank"
           rel="noopener noreferrer"
         >
-          LINK
+          Link to tutorial
         </a>
       </header>
     </div>

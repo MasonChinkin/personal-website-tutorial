@@ -5,9 +5,9 @@ import CreateReactApp from "./CreateReactApp";
 const App = () => (
   <>
     <Switch>
-      <Route exact path={'/baseapp'} component={CreateReactApp} />
+      <Route exact path={'/'} component={CreateReactApp} />
       {/* Insert other routes here */}
-      <Redirect to="/baseapp" />
+      <Redirect to="/" />
     </Switch>
   </>
 );
