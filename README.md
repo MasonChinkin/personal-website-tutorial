@@ -32,7 +32,7 @@ The apps you will be forking are built with `create-react-app`. Using a differen
 You will need a gmail account and github account. Even though everything will be free initially (excluding buying a domain), you will be required to provide your credit card to enable the necessary `Google Cloud Platform` services.
 
 #### Setup Google Cloud Platform
-* Create a Project
+* Create a project named `portfolio`
   * [LINK](https://console.cloud.google.com/projectcreate)
 
 * While logged into the project above, click `enable api` at the following links
@@ -58,6 +58,7 @@ You will need a gmail account and github account. Even though everything will be
   * [LINK](https://domains.google/)
   * A `.com` url will cost $12/year
   * Go to [DNS Settings](https://domains.google.com/m/registrar/). Add 2 records under `Custom resource records` with your instance's static IP.
+  
 | name | type | TTL | data                    |
 |------|------|-----|-------------------------|
 | @    | A    | 1h  | Your Instance IP Adress |
