@@ -19,7 +19,7 @@ The server is hosted on `Google Compute Engine`, which is free the first year an
 
 This tutorial will use `Google Domain` for the dns, but any dns provider would work.
 
-The apps you will be forking are built with `create-react-app`. Using a different foundation will require adjustments to `server.js` and `Dockerfile`.
+The repos you will be forking are built with `create-react-app`. Using a different foundation will require adjustments to `server.js` and `Dockerfile`.
 
 ***
 
