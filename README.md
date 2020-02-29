@@ -2,7 +2,7 @@
 
 # A cheap, moderate skill level setup for your personal website
 
-## Table of Contents
+### Table of Contents
 - [Preview of tools](https://github.com/MasonChinkin/personal-website-tutorial#preview-of-tools-used)
 1. [Set up required accounts](https://github.com/MasonChinkin/personal-website-tutorial#set-up-required-accounts)
 2. [Setup Google Cloud Platform](https://github.com/MasonChinkin/personal-website-tutorial#setup-google-cloud-platform)
@@ -16,10 +16,10 @@ This tutorial spawned from my own quest to upgrade my personal website from a [G
 1. Commits pushed to github should be automatically tested and (if tests pass) deployed to the server.
 2. It should serve independent apps from independent repos under subdirectories, allowing the freedom to explore different projects with no concern for dependencies or git histories. i.e. masonchinkin.com and masonchinkin.com/baseapp are seperate apps.
 
-## Don't be scared!!!
+### Don't be scared!!!
 I have done the advanced configuration for you in the repos you will fork, and you can learn that stuff in your own time. You can do it! Almost every tool you will use in this tutrial was completely new to me when I started this.
 
-## Preview of tools used
+### Preview of tools used
 This setup is typically called a "mutli-container" application. Each app is built into a `Docker` container. `Docker-Compose` will spin up all of the apps on your server, and use `Nginx` to direct traffic to those apps based on the url.
 
 CI/CD uses `Google Cloud Build` and `Google Container Registry`
@@ -32,7 +32,7 @@ The repos you will be forking are built with `create-react-app`. Using a differe
 
 ***
 
-## Let's go!
+### Let's go!
 
 #### Set up required accounts
 
