@@ -1,6 +1,15 @@
 # This is not finished!!! Don't attempt if you are seeing this.
 
-# A cheap, moderate skill level setup for your personal website + projects
+# A cheap, moderate skill level setup for your personal website
+
+## Table of Contents
+- [Preview of tools](https://github.com/MasonChinkin/personal-website-tutorial#preview-of-tools-used)
+1. [Set up required accounts](https://github.com/MasonChinkin/personal-website-tutorial#set-up-required-accounts)
+2. [Setup Google Cloud Platform](https://github.com/MasonChinkin/personal-website-tutorial#setup-google-cloud-platform)
+2. [Setup GitHub](https://github.com/MasonChinkin/personal-website-tutorial#setup-github)
+3. [SSH into the instance and Do a one time only setup](https://github.com/MasonChinkin/personal-website-tutorial#ssh-into-the-instance-and-do-a-one-time-only-setup)
+4. [Is it working?](https://github.com/MasonChinkin/personal-website-tutorial#is-it-working)
+5. [Is CI/CD working?](https://github.com/MasonChinkin/personal-website-tutorial#is-cicd-working)
 
 This tutorial spawned from my own quest to upgrade my personal website from a [GitHub Page](https://masonchinkin.github.io/) to [something more advanced](masonchinkin.com), using what I had learned since starting my career as a software engineer. At a high level, I had two MVPs for my website:
 
@@ -82,7 +91,7 @@ You will need a gmail account and github account. Even though everything will be
 
 * Prep the `personal-website-tutorial-docker-compose` repo
   * In `init-letsencrypt.sh`, change `EMAIL` and `DOMAIN` to reflect your domain name and email. This script makes it easy to secure an ssl certificate, giving your website the `s` in `https`.
-  * In `docker-compose.yaml`, change `PROJECT` to reflect your `Google Cloud Platform` project name, including the dash and number following the name.
+  * In `docker-compose.yaml`, change `PROJECT` to reflect your `Google Cloud Platform` project name, which should be "portfolio-" + a number.
 
 #### SSH into the instance and Do a one time only setup
 * Set up docker compose
@@ -96,7 +105,7 @@ You will need a gmail account and github account. Even though everything will be
 * `sudo docker-compose up -d'`
 * Confirm that it containers are running with `sudo docker ps`
 
-#### Is it working???????
+#### Is it working?
 * Check your homepageurl.com and homepageurl.com/baseapp
 * If it is not loading, double check that you followed all instructions above **EXACTLY**.
 * If you definitely did everything right, make an issue and I'll try to help :)
